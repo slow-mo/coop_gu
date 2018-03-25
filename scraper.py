@@ -5,7 +5,7 @@ import lxml.html
 import re
 import datetime
 
-LAST_MONTH = 2
+LAST_MONTH = 0
 DEBUG = 0
 BASE_URL = 'http://www.gazzettaufficiale.it'
 
