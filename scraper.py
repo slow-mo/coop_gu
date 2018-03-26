@@ -69,10 +69,10 @@ if PREV == 1:
 		scrape_gu(BASE_URL + i.attrib['href'])	
 elif PREV == 2:
 	for i in range(2012, 2019):
-		gu_html = scraperwiki.scrape('http://www.gazzettaufficiale.it/ricercaArchivioCompleto/serie_generale/' + i)
+		gu_html = scraperwiki.scrape('http://www.gazzettaufficiale.it/ricercaArchivioCompleto/serie_generale/%i' % i)
 		gu_root = lxml.html.fromstring(gu_html)
-		for i in gu_root.cssselect(".elenco_gazzette"):
-			scrape_gu(BASE_URL + i.attrib['href'])
+		for l in gu_root.cssselect(".elenco_gazzette"):
+			scrape_gu(BASE_URL + l.attrib['href'])
 else:
 	gu_html = scraperwiki.scrape(BASE_URL)
 	gu_root = lxml.html.fromstring(gu_html)
