@@ -20,7 +20,7 @@ def str_date(str):
 		return ""
 
 def scrape_gu(url):
-	print url
+	emettitore = ""
 	html = scraperwiki.scrape(url)
 	root = lxml.html.fromstring(html)
 	t = root.cssselect("span[class='estremi']")
