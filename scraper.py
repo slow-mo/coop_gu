@@ -5,7 +5,7 @@ import lxml.html
 import re
 import datetime
 
-PREV = 2
+PREV = 0
 BASE_URL = 'http://www.gazzettaufficiale.it'
 
 mesi = ('gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto',
