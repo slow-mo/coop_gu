@@ -29,7 +29,7 @@ def scrape_gu(url):
 
 
     for i in root.cssselect(".risultato"):
-        if "coop." in i[1].text or "Coop." in i[1].text or "Cooperativ" in i[1].text or "cooperativ" in i[1].text:
+	if re.search("\bcoop(?:\.|\b|erativ)", i[1].text, re.I):
             searchObj = re.search(r"atto\.codiceRedazionale=(.+?)(?:&|$)", i[1].attrib['href'], re.I)
             if searchObj:
                 codice = searchObj.group(1)
