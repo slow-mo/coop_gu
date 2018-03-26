@@ -20,6 +20,7 @@ def str_date(str):
 		return ""
 
 def scrape_gu(url):
+	print url
 	html = scraperwiki.scrape(url)
 	root = lxml.html.fromstring(html)
 	t = root.cssselect("span[class='estremi']")
@@ -68,7 +69,7 @@ if PREV == 1:
 	for i in gu_root.cssselect(".elenco_ugazzette"):
 		scrape_gu(BASE_URL + i.attrib['href'])	
 elif PREV == 2:
-	for i in range(2012, 2019):
+	for i in range(2015, 2019):
 		gu_html = scraperwiki.scrape('http://www.gazzettaufficiale.it/ricercaArchivioCompleto/serie_generale/%i' % i)
 		gu_root = lxml.html.fromstring(gu_html)
 		for l in gu_root.cssselect(".elenco_gazzette"):
