@@ -1,5 +1,4 @@
 # coding: utf-8
-quit()
 import scraperwiki
 import lxml.html
 import re
