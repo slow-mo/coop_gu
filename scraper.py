@@ -74,8 +74,9 @@ elif PREV == 2:
 		for l in gu_root.cssselect(".elenco_gazzette"):
 			scrape_gu(BASE_URL + l.attrib['href'])
 else:
-	gu_html = scraperwiki.scrape(BASE_URL)
-	gu_root = lxml.html.fromstring(gu_html)
-	url = gu_root.cssselect(".ultimelist li a")[0].attrib['href']
-	scrape_gu(BASE_URL + url)
+	print 'ok'
+	#gu_html = scraperwiki.scrape(BASE_URL)
+	#gu_root = lxml.html.fromstring(gu_html)
+	#url = gu_root.cssselect(".ultimelist li a")[0].attrib['href']
+	#scrape_gu(BASE_URL + url)
 	
